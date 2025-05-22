@@ -540,20 +540,8 @@ const contactForm = {
         }
     },
 
-    
     clearFieldError(field) {
         const formGroup = field.closest('.form-group');
-        const errorElement = formGroup.querySelector('.error-message');
-        
-        if (formGroup) {
-            formGroup.classList.remove('error');
-        }
-
-        if (errorElement) {
-            errorElement.textContent = '';
-        }
-    },
-= field.closest('.form-group');
         const errorElement = formGroup.querySelector('.error-message');
         
         formGroup
