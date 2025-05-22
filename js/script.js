@@ -546,6 +546,3 @@ const contactForm = {
         
         formGroup
 }
-
-
-// Fim do script
