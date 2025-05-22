@@ -545,3 +545,7 @@ const contactForm = {
         const errorElement = formGroup.querySelector('.error-message');
         
         formGroup
+}
+
+
+// Fim do script
