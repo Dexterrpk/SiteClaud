@@ -93,12 +93,13 @@ const loadingScreen = {
     },
 
     onLoadComplete() {
+         console.log('🔮 Site carregado com sucesso! Bem-vindo ao mundo místico de Naiara Naianjo ✨');
         // Initialize other components after loading
         particles.init();
         animations.init();
         typewriter.init();
         floatingElements.start();
-        console.log('🔮 Site carregado com sucesso! Bem-vindo ao mundo místico de Naiara Naianjo ✨');
+       
     }
 };
 
