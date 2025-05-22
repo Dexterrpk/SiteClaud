@@ -88,7 +88,7 @@ const loadingScreen = {
                 loading.classList.add('hidden');
                 state.isLoading = false;
                 this.onLoadComplete();
-            }, 1500);
+            }, 3000);
         }
     },
 
