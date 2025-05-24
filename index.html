@@ -1,0 +1,479 @@
+<!-- 
+ESTRUTURA DO PROJETO:
+
+📁 naiara-tarot-site/
+├── 📄 index.html
+├── 📁 css/
+│   └── 📄 style.css
+├── 📁 js/
+│   └── 📄 script.js
+├── 📁 images/
+│   ├── 🖼️ logo.png
+│   ├── 🖼️ hero-bg.jpg
+│   ├── 🖼️ about-photo.jpg
+│   ├── 🖼️ tarot-cards.jpg
+│   ├── 🖼️ crystal-ball.jpg
+│   └── 🖼️ favicon.ico
+├── 📄 README.md
+└── 📄 .gitignore
+
+ARQUIVO 1: index.html
+--> 
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Inaiara Anjos - Tarot e Oráculos</title>         
+        <meta name="description" content="Consultas de Tarot e Oráculos com Inaiara Anjos. Descubra seu caminho através da sabedoria ancestral das cartas."> 
+        <meta name="keywords" content="tarot, oráculo, consulta, espiritualidade, autoconhecimento"> 
+        <meta name="author" content="Inaiara Anjos"> 
+        <!-- Favicon -->         
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico"> 
+        <link rel="apple-touch-icon" href="images/logo.png"> 
+        <!-- Open Graph -->         
+        <meta property="og:title" content="Inaiara Anjos - Tarot e Oráculos"> 
+        <meta property="og:description" content="Consultas de Tarot e Oráculos com Inaiara Anjos"> 
+        <meta property="og:image" content="images/logo.png"> 
+        <meta property="og:type" content="website"> 
+        <meta property="og:url" content="https://naianjostarot.netlify.app/"> 
+        <!-- Twitter Card -->         
+        <meta name="twitter:card" content="summary_large_image"> 
+        <meta name="twitter:title" content="Inaiara Anjos - Tarot e Oráculos"> 
+        <meta name="twitter:description" content="Consultas de Tarot e Oráculos com Inaiara Anjos"> 
+        <meta name="twitter:image" content="images/logo.png"> 
+        <!-- CSS -->         
+        <link href="../../css/theme.css" rel="stylesheet" type="text/css">
+        <link href="../css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/style.css"> 
+        <!-- Preload critical resources -->         
+        <link rel="preload" href="images/hero-bg.jpg" as="image"> 
+        <link rel="preload" href="css/style.css" as="style"> 
+    </head>     
+    <body> 
+        <!-- Loading screen -->                         /*
+        <div class="loading" id="loading"> 
+            <div class="loader"></div>                          
+        </div>                */         
+        <!-- Particles background -->         
+        <div class="particles" id="particles"></div>         
+        <!-- Header -->         
+        <header> 
+            <nav> 
+                <div class="logo"> 
+                    <img src="images/logo.png" alt="Inaiara Anjos Logo" class="logo-img"> <span>Inaiara Anjos</span> 
+                </div>                 
+                <ul class="nav-links"> 
+                    <li><a href="#home">Início</a>
+                    </li>                     
+                    <li><a href="#services">Serviços</a>
+                    </li>                     
+                    <li><a href="#about">Sobre</a>
+                    </li>                     
+                    <li><a href="#testimonials">Depoimentos</a>
+                    </li>                     
+                    <li><a href="#contact">Contato</a>
+                    </li>                     
+                </ul>                 
+                <div class="mobile-menu" aria-label="Menu Mobile"> <span></span> <span></span> <span></span> 
+                </div>                 
+            </nav>             
+        </header>         
+        <!-- Main content -->         
+        <main> 
+            <!-- Hero section -->             
+            <section class="hero" id="home"> 
+                <div class="hero-bg"></div>                 
+                <div class="hero-content"> 
+                    <h1>Inaiara Anjos</h1> 
+                    <p class="hero-subtitle">Descubra seu caminho através da sabedoria ancestral das cartas</p> 
+                    <p class="hero-description">Consultas de Tarot e Oráculos para iluminar sua jornada pessoal com mais de 8 anos de experiência</p> 
+                    <div class="hero-buttons"> <a href="#contact" class="cta-button primary">Agende sua Consulta</a> <a href="#services" class="cta-button secondary">Ver Serviços</a> 
+                    </div>                     
+                    <div class="hero-stats"> 
+                        <div class="stat"> <span class="stat-number">500+</span> <span class="stat-label">Consultas Realizadas</span> 
+                        </div>                         
+                        <div class="stat"> <span class="stat-number">8</span> <span class="stat-label">Anos de Experiência</span> 
+                        </div>                         
+                        <div class="stat"> <span class="stat-number">98%</span> <span class="stat-label">Clientes Satisfeitos</span> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </section>             
+            <!-- Services section -->             
+            <section class="services fade-in" id="services"> 
+                <div class="container"> 
+                    <h2 class="section-title">Serviços Espirituais</h2> 
+                    <p class="section-subtitle">Encontre a orientação que você precisa através dos nossos serviços especializados</p> 
+                    <div class="services-grid"> 
+                        <div class="service-card featured"> 
+                            <div class="service-badge">Mais Popular</div>                             
+                            <div class="service-icon">🔮</div>                             
+                            <h3>Tarot Completo</h3> 
+                            <p>Leitura completa com 10 cartas explorando passado, presente e futuro. Ideal para questões complexas e orientação geral.</p> 
+                            <ul class="service-features"> 
+                                <li>✨ Análise detalhada</li>                                 
+                                <li>✨ Gravação da consulta</li>                                 
+                                <li>✨ Relatório por escrito</li>                                 
+                            </ul>                             
+                            <div class="service-price"> <span class="price-old">R$ 100,00</span> <span class="price-current">R$ 80,00</span> 
+                            </div>                             <a href="#contact" class="service-btn">Agendar Agora</a> 
+                        </div>                         
+                        <div class="service-card"> 
+                            <div class="service-icon">⭐</div>                             
+                            <h3>Consulta Rápida</h3> 
+                            <p>Leitura focada de 3 cartas para questões específicas. Perfeita para orientações rápidas e direcionadas.</p> 
+                            <ul class="service-features"> 
+                                <li>✨ Resposta objetiva</li>                                 
+                                <li>✨ 30 minutos</li>                                 
+                                <li>✨ Online ou presencial</li>                                 
+                            </ul>                             
+                            <div class="service-price"> <span class="price-current">R$ 45,00</span> 
+                            </div>                             <a href="#contact" class="service-btn">Agendar Agora</a> 
+                        </div>                         
+                        <div class="service-card"> 
+                            <div class="service-icon">🌙</div>                             
+                            <h3>Oráculo dos Anjos</h3> 
+                            <p>Mensagens angelicais através dos oráculos. Orientação espiritual e proteção para sua jornada.</p> 
+                            <ul class="service-features"> 
+                                <li>✨ Mensagens angelicais</li>                                 
+                                <li>✨ Proteção espiritual</li>                                 
+                                <li>✨ Cura energética</li>                                 
+                            </ul>                             
+                            <div class="service-price"> <span class="price-current">R$ 60,00</span> 
+                            </div>                             <a href="#contact" class="service-btn">Agendar Agora</a> 
+                        </div>                         
+                        <div class="service-card"> 
+                            <div class="service-icon">💝</div>                             
+                            <h3>Tarot do Amor</h3> 
+                            <p>Especializado em questões amorosas e relacionamentos. Descubra os caminhos do coração.</p> 
+                            <ul class="service-features"> 
+                                <li>✨ Foco em relacionamentos</li>                                 
+                                <li>✨ Compatibilidade</li>                                 
+                                <li>✨ Orientação amorosa</li>                                 
+                            </ul>                             
+                            <div class="service-price"> <span class="price-current">R$ 70,00</span> 
+                            </div>                             <a href="#contact" class="service-btn">Agendar Agora</a> 
+                        </div>                         
+                        <div class="service-card"> 
+                            <div class="service-icon">💼</div>                             
+                            <h3>Tarot Profissional</h3> 
+                            <p>Orientação para carreira, negócios e prosperidade. Descubra seu potencial profissional.</p> 
+                            <ul class="service-features"> 
+                                <li>✨ Carreira e negócios</li>                                 
+                                <li>✨ Prosperidade financeira</li>                                 
+                                <li>✨ Decisões importantes</li>                                 
+                            </ul>                             
+                            <div class="service-price"> <span class="price-current">R$ 75,00</span> 
+                            </div>                             <a href="#contact" class="service-btn">Agendar Agora</a> 
+                        </div>                         
+                        <div class="service-card premium"> 
+                            <div class="service-badge">Premium</div>                             
+                            <div class="service-icon">🌟</div>                             
+                            <h3>Mapa Astral Completo</h3> 
+                            <p>Análise completa do seu mapa astral natal. Conheça sua personalidade e propósito de vida.</p> 
+                            <ul class="service-features"> 
+                                <li>✨ Análise completa</li>                                 
+                                <li>✨ Relatório de 20 páginas</li>                                 
+                                <li>✨ Sessão de 90 minutos</li>                                 
+                            </ul>                             
+                            <div class="service-price"> <span class="price-current">R$ 120,00</span> 
+                            </div>                             <a href="#contact" class="service-btn">Agendar Agora</a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Call to action -->                     
+                    <div class="services-cta"> 
+                        <h3>Não sabe qual serviço escolher?</h3> 
+                        <p>Entre em contato e eu te ajudo a encontrar a consulta ideal para você!</p> <a href="https://wa.me/5511999999999?text=Olá! Preciso de ajuda para escolher o serviço ideal." class="cta-button">Falar no WhatsApp</a> 
+                    </div>                     
+                </div>                 
+            </section>             
+            <!-- About section -->             
+            <section class="about fade-in" id="about"> 
+                <div class="container"> 
+                    <div class="about-content"> 
+                        <div class="about-text"> 
+                            <h2 class="section-title left">Sobre Inaiara Anjos</h2> 
+                            <p class="lead">Mais de 8 anos dedicados ao estudo e prática das artes divinatórias</p> 
+                            <p>Minha jornada com o Tarot começou aos 20 anos, quando busquei respostas para questões pessoais e descobri um universo fascinante de autoconhecimento e orientação espiritual.</p> 
+                            <p>Ao longo destes anos, aprofundei meus estudos em diversas modalidades: Tarot Rider-Waite, Tarot de Marselha, Oráculos Angelicais, Astrologia e Numerologia. Cada consulta é uma oportunidade de conexão genuína com a energia do consulente.</p> 
+                            <div class="expertise"> 
+                                <h4>Especializações:</h4> 
+                                <div class="expertise-grid"> 
+                                    <div class="expertise-item"> <span class="expertise-icon">🎴</span> <span>Tarot Rider-Waite</span> 
+                                    </div>                                     
+                                    <div class="expertise-item"> <span class="expertise-icon">👼</span> <span>Oráculo dos Anjos</span> 
+                                    </div>                                     
+                                    <div class="expertise-item"> <span class="expertise-icon">⭐</span> <span>Astrologia Natal</span> 
+                                    </div>                                     
+                                    <div class="expertise-item"> <span class="expertise-icon">🔢</span> <span>Numerologia</span> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="credentials"> 
+                                <h4>Formação e Certificações:</h4> 
+                                <ul> 
+                                    <li>📜 Certificação em Tarot Terapêutico - Instituto Brasileiro de Terapias</li>                                     
+                                    <li>📜 Curso de Astrologia Psicológica - Escola de Astrologia de São Paulo</li>                                     
+                                    <li>📜 Formação em Numerologia Cabalística</li>                                     
+                                    <li>📜 Workshop de Oráculos Angelicais com Doreen Virtue</li>                                     
+                                </ul>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="about-visual"> 
+                            <div class="about-image"> 
+                                <img src="images/about-photo.jpg" alt="Inaiara Anjos" class="profile-photo"> 
+                                <div class="mystical-elements"> 
+                                    <div class="floating-card card-1">🃏</div>                                     
+                                    <div class="floating-card card-2">🔮</div>                                     
+                                    <div class="floating-card card-3">⭐</div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="stats-container"> 
+                                <div class="stat-item"> <span class="stat-number">500+</span> <span class="stat-label">Consultas</span> 
+                                </div>                                 
+                                <div class="stat-item"> <span class="stat-number">8</span> <span class="stat-label">Anos</span> 
+                                </div>                                 
+                                <div class="stat-item"> <span class="stat-number">98%</span> <span class="stat-label">Satisfação</span> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </section>             
+            <!-- Testimonials section -->             
+            <section class="testimonials fade-in" id="testimonials"> 
+                <div class="container"> 
+                    <h2 class="section-title">O que dizem sobre mim</h2> 
+                    <p class="section-subtitle">Depoimentos reais de pessoas que encontraram clareza através das consultas</p> 
+                    <div class="testimonials-slider"> 
+                        <div class="testimonials-track" id="testimonialsTrack"> 
+                            <div class="testimonial-card"> 
+                                <div class="stars">⭐⭐⭐⭐⭐</div>                                 
+                                <p class="testimonial-text">"A Naiara tem um dom incrível! Sua leitura foi extremamente precisa e me ajudou a tomar uma decisão importante na minha vida profissional. Voltarei sempre!"</p> 
+                                <div class="testimonial-author"> 
+                                    <div class="author-info"> <strong>Maria Silva</strong> <span>Empresária - São Paulo</span> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="testimonial-date">Dezembro 2024</div>                                 
+                            </div>                             
+                            <div class="testimonial-card"> 
+                                <div class="stars">⭐⭐⭐⭐⭐</div>                                 
+                                <p class="testimonial-text">"Fiz uma consulta de Tarot do Amor e foi surpreendente como as cartas refletiram exatamente minha situação. A orientação que recebi foi fundamental para meu relacionamento."</p> 
+                                <div class="testimonial-author"> 
+                                    <div class="author-info"> <strong>João Santos</strong> <span>Designer - Rio de Janeiro</span> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="testimonial-date">Novembro 2024</div>                                 
+                            </div>                             
+                            <div class="testimonial-card"> 
+                                <div class="stars">⭐⭐⭐⭐⭐</div>                                 
+                                <p class="testimonial-text">"O Mapa Astral que a Naiara fez para mim foi revelador. Finalmente entendi alguns padrões da minha personalidade e como posso usar isso a meu favor."</p> 
+                                <div class="testimonial-author"> 
+                                    <div class="author-info"> <strong>Ana Costa</strong> <span>Psicóloga - Belo Horizonte</span> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="testimonial-date">Outubro 2024</div>                                 
+                            </div>                             
+                            <div class="testimonial-card"> 
+                                <div class="stars">⭐⭐⭐⭐⭐</div>                                 
+                                <p class="testimonial-text">"Consulta online maravilhosa! Mesmo à distância, senti uma conexão muito forte. As orientações foram certeiras e me trouxeram muita paz."</p> 
+                                <div class="testimonial-author"> 
+                                    <div class="author-info"> <strong>Pedro Lima</strong> <span>Engenheiro - Brasília</span> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="testimonial-date">Setembro 2024</div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="slider-controls"> 
+                            <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>                             
+                            <div class="slider-dots"></div>                             
+                            <button class="slider-btn next" onclick="changeSlide(1)">❯</button>                             
+                        </div>                         
+                    </div>                     
+                    <div class="testimonials-cta"> 
+                        <p>Quer compartilhar sua experiência?</p> <a href="#contact" class="cta-button">Deixe seu Depoimento</a> 
+                    </div>                     
+                </div>                 
+            </section>             
+            <!-- Contact section -->             
+            <section class="contact fade-in" id="contact"> 
+                <div class="container"> 
+                    <h2 class="section-title">Entre em Contato</h2> 
+                    <p class="section-subtitle">Estou aqui para iluminar seu caminho. Escolha a forma de contato que preferir</p> 
+                    <div class="contact-content"> 
+                        <div class="contact-info"> 
+                            <h3>Informações de Contato</h3> 
+                            <div class="contact-item"> 
+                                <div class="contact-icon">📱</div>                                 
+                                <div class="contact-details"> <strong>WhatsApp</strong> <span>(11) 99999-9999</span> <small>Resposta em até 2 horas</small> 
+                                </div>                                 
+                            </div>                             
+                            <div class="contact-item"> 
+                                <div class="contact-icon">📧</div>                                 
+                                <div class="contact-details"> <strong>E-mail</strong> <span>naiara.naianjo@email.com</span> <small>Resposta em até 24 horas</small> 
+                                </div>                                 
+                            </div>                             
+                            <div class="contact-item"> 
+                                <div class="contact-icon">📍</div>                                 
+                                <div class="contact-details"> <strong>Atendimento</strong> <span>Online e Presencial</span> <small>São Paulo - SP</small> 
+                                </div>                                 
+                            </div>                             
+                            <div class="contact-item"> 
+                                <div class="contact-icon">🕒</div>                                 
+                                <div class="contact-details"> <strong>Horário de Atendimento</strong> <span>Segunda à Sexta: 9h às 18h</span> <small>Sábado: 9h às 14h</small> 
+                                </div>                                 
+                            </div>                             
+                            <div class="payment-methods"> 
+                                <h4>Formas de Pagamento</h4> 
+                                <div class="payment-icons"> <span>💳 Cartão</span> <span>📱 PIX</span> <span>💰 Dinheiro</span> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="contact-form"> 
+                            <h3>Envie uma Mensagem</h3> 
+                            <form id="contactForm" novalidate> 
+                                <div class="form-row"> 
+                                    <div class="form-group"> 
+                                        <label for="name">Nome Completo *</label>                                         
+                                        <input type="text" id="name" name="name" required> <span class="error-message"></span> 
+                                    </div>                                     
+                                    <div class="form-group"> 
+                                        <label for="email">E-mail *</label>                                         
+                                        <input type="email" id="email" name="email" required> <span class="error-message"></span> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="form-row"> 
+                                    <div class="form-group"> 
+                                        <label for="phone">WhatsApp</label>                                         
+                                        <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999"> 
+                                    </div>                                     
+                                    <div class="form-group"> 
+                                        <label for="service">Serviço de Interesse</label>                                         
+                                        <select id="service" name="service"> 
+                                            <option value="">Selecione um serviço</option>                                             
+                                            <option value="tarot-completo">Tarot Completo - R$ 80</option>                                             
+                                            <option value="consulta-rapida">Consulta Rápida - R$ 45</option>                                             
+                                            <option value="oraculo-anjos">Oráculo dos Anjos - R$ 60</option>                                             
+                                            <option value="tarot-amor">Tarot do Amor - R$ 70</option>                                             
+                                            <option value="tarot-profissional">Tarot Profissional - R$ 75</option>                                             
+                                            <option value="mapa-astral">Mapa Astral - R$ 120</option>                                             
+                                        </select>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="form-group"> 
+                                    <label for="message">Sua Pergunta ou Mensagem *</label>                                     
+                                    <textarea id="message" name="message" rows="5" required placeholder="Conte-me um pouco sobre o que você gostaria de saber ou qual orientação está buscando..."></textarea> <span class="error-message"></span> 
+                                </div>                                 
+                                <div class="form-group checkbox-group"> 
+                                    <label class="checkbox-label"> 
+                                        <input type="checkbox" id="privacy" name="privacy" required> <span class="checkmark"></span> 
+                                        Concordo com a <a href="#" target="_blank">Política de Privacidade</a> *
+                                    </label>                                     <span class="error-message"></span> 
+                                </div>                                 
+                                <button type="submit" class="submit-btn"> <span>Enviar Mensagem</span> 
+                                    <div class="btn-loader"></div>                                     
+                                </button>                                 
+                            </form>                             
+                            <div class="form-success" id="formSuccess"> 
+                                <div class="success-icon">✅</div>                                 
+                                <h4>Mensagem Enviada!</h4> 
+                                <p>Obrigada pelo contato! Em breve retornarei sua mensagem.</p> 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </section>             
+        </main>         
+        <!-- Footer -->         
+        <footer> 
+            <div class="footer-content"> 
+                <div class="footer-section"> 
+                    <div class="footer-logo"> 
+                        <img src="images/logo.png" alt="Inaiara Anjos"> <span>Inaiara Anjos</span> 
+                    </div>                     
+                    <p>Iluminando caminhos através da sabedoria ancestral das cartas há mais de 8 anos.</p> 
+                    <div class="social-links"> <a href="#" aria-label="Instagram" target="_blank">📷</a> <a href="#" aria-label="Facebook" target="_blank">📘</a> <a href="https://wa.me/5511999999999" aria-label="WhatsApp" target="_blank">📱</a> <a href="mailto:naiara.naianjo@email.com" aria-label="E-mail">📧</a> 
+                    </div>                     
+                </div>                 
+                <div class="footer-section"> 
+                    <h4>Serviços</h4> 
+                    <ul> 
+                        <li><a href="#services">Tarot Completo</a>
+                        </li>                         
+                        <li><a href="#services">Consulta Rápida</a>
+                        </li>                         
+                        <li><a href="#services">Oráculo dos Anjos</a>
+                        </li>                         
+                        <li><a href="#services">Tarot do Amor</a>
+                        </li>                         
+                        <li><a href="#services">Mapa Astral</a>
+                        </li>                         
+                    </ul>                     
+                </div>                 
+                <div class="footer-section"> 
+                    <h4>Links Úteis</h4> 
+                    <ul> 
+                        <li><a href="#about">Sobre Mim</a>
+                        </li>                         
+                        <li><a href="#testimonials">Depoimentos</a>
+                        </li>                         
+                        <li><a href="#contact">Contato</a>
+                        </li>                         
+                        <li><a href="#">Blog</a>
+                        </li>                         
+                        <li><a href="#">FAQ</a>
+                        </li>                         
+                    </ul>                     
+                </div>                 
+                <div class="footer-section"> 
+                    <h4>Contato Rápido</h4> 
+                    <div class="footer-contact"> 
+                        <p>📱 (11) 99999-9999</p> 
+                        <p>📧 naiara.naianjo@email.com</p> 
+                        <p>🕒 Seg-Sex: 9h-18h | Sáb: 9h-14h</p> 
+                    </div>                     
+                </div>                 
+            </div>             
+            <div class="footer-bottom"> 
+                <p>&copy; 2025 Inaiara Anjos - Todos os direitos reservados</p> 
+                <p>Desenvolvido por Cleiton Neri</p> 
+                <div class="footer-links"> <a href="#">Política de Privacidade</a> <a href="#">Termos de Uso</a> <a href="#">Cookies</a> 
+                </div>                 
+            </div>             
+        </footer>         
+        <!-- WhatsApp floating button -->         <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta de tarot." class="whatsapp-btn" target="_blank" aria-label="WhatsApp"> <span class="whatsapp-icon">📱</span> <span class="whatsapp-text">Fale Comigo</span> </a> 
+        <!-- Back to top button -->         
+        <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"> 
+            ↑
+</button>         
+        <!-- JavaScript -->         
+        <!-- <script src="script.js"></script> -->         
+        <!-- Schema.org structured data -->         
+        <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Inaiara Anjos",
+        "jobTitle": "Tarólogo e Consultor Espiritual",
+        "description": "Especialista em Tarot e Oráculos com mais de 8 anos de experiência",
+        "url": "https://naianjostarot.netlify.app/",
+        "sameAs": [
+            "https://wa.me/5575988245757"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-11-99999-9999",
+            "contactType": "customer service",
+            "availableLanguage": "Portuguese"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        }
+    }
+    </script>         
+    </body>     
+</html>
